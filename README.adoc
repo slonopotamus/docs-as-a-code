@@ -1,0 +1,14 @@
+= Docs as a Code
+
+Sources for tech talk @ MY.GAMES.
+
+== Building
+
+[source,shell]
+----
+bundle config set --local path vendor/bundle
+bundle update
+bundle exec rake
+----
+
+And then, open `public/index.html`
