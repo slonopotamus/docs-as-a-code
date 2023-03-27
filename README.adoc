@@ -2,8 +2,8 @@
 
 Sources for tech talk @ MY.GAMES.
 
-* link:https://slonopotamus.github.io/docs-as-a-code/[Interactive HTML]
-* link:https://slonopotamus.github.io/docs-as-a-code/?print-pdf[Printable]
+* link:https://slonopotamus.github.io/docs-as-code/[Interactive HTML]
+* link:https://slonopotamus.github.io/docs-as-code/?print-pdf[Printable]
 
 == Building
 
