@@ -1,6 +1,6 @@
 = Docs as a code
 Марат Радченко <https://github.com/slonopotamus[@slonopotamus]>
-v1.0, 2023-03-26
+v1.0, 2023-03-28
 :source-highlighter: highlightjs
 :revealjs_hash: true
 :revealjs_theme: blood
@@ -8,6 +8,28 @@ v1.0, 2023-03-26
 :icons: font
 
 **{revdate}**
+
+== Confluence - MSOffice в вебе
+
+=== Перегруженный UI
+
+image::images/confluence-ui.png[]
+
+=== Скоуп - одна страница
+
+=== Версионирование само по себе
+
+=== Отвратительные урлы
+
+https://games-confluence.mail.ru/pages/viewpage.action?pageId=183527494[]
+
+image::images/nausea.png[]
+
+=== Очень, очень плохой поиск
+
+=== Низкая читабельность текста
+
+image::images/lorem.png[]
 
 == Static Site Generators
 
@@ -33,27 +55,11 @@ image::images/ssg.png[]
 
 Фокус на контенте
 
-[.columns]
 === !
 
-.page.adoc
-[source,asciidoc,.column]
-++++
-[plantuml]
+[source,markdown]
 ----
-include::scheme.puml[]
-----
-++++
-
-.scheme.puml
-[source,puml,.column]
-----
-include::partials/scheme.puml[]
-----
-
-[plantuml,.column]
-----
-include::partials/scheme.puml[]
+include::partials/example.md[]
 ----
 
 === Исходники в репозитории
@@ -64,6 +70,30 @@ include::partials/scheme.puml[]
 - Mass update
 - Генерация побочных артефактов (схемы, графики, API-документация)
 
+[.columns]
+=== !
+
+.page.adoc
+[source,asciidoc,.column]
+-----
+[plantuml]
+----
+\include::scheme.puml[]
+----
+-----
+
+.scheme.puml
+[source,puml,.column]
+----
+include::partials/scheme.puml[]
+----
+
+[.column]
+[plantuml]
+----
+include::partials/scheme.puml[]
+----
+
 == GitLab Pages
 
 ..gitlab-ci.yml
@@ -71,8 +101,8 @@ include::partials/scheme.puml[]
 ----
 pages:
   script:
-    - do something
-    - put stuff to <repo>/public
+    - generate some HTML
+    - put files to <repo>/public
   artifacts:
     paths:
       - public
@@ -80,11 +110,15 @@ pages:
 
 icon:magic[]
 
+https://mygroup.gitlab.io/myproject/
+
 == Что не так с Markdown
 
 === !
 
 image::images/shelezyaka.jpg[]
+
+Инлюдов тоже нет
 
 === !
 image::images/flavors.jpg[]
@@ -116,5 +150,29 @@ image::images/flavors.jpg[]
 - Markdown
 - Markdown 2
 - ...
+
+=== В непонятной ситуации
+
+[source,markdown]
+----
+{{< note title="Custom Note" >}}
+This is a note.
+{{< /note >}}
+----
+
+Прибито гвоздями к конкретному парсеру
+
+Нет поддержки в редакторе
+
+== Так вообще кто-то делает?
+
+Да, все :)
+
+.Примеры
+- https://docs.fedoraproject.org/en-US/fedora/latest/[docs.fedoraproject.org]
+- https://learn.microsoft.com/en-us/windows/apps/get-started/[learn.microsoft.com]
+- https://docs.gitlab.com/ee/user/[docs.gitlab.com]
+- https://jenkins.io/doc/[jenkins.io/doc]
+- И т.д.
 
 == Q & A
