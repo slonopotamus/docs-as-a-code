@@ -1,0 +1,15 @@
+pages:
+  image: ruby:latest
+  stage: build
+  script:
+    - bundle config set --local path vendor/bundle
+    - bundle install -j $(nproc)
+    - bundle exec rake
+  cache:
+    paths:
+      - vendor/bundle
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

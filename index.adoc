@@ -9,6 +9,112 @@ v1.0, 2023-03-26
 
 **{revdate}**
 
-== !
+== Static Site Generators
+
+image::images/ssg.png[]
+
+=== !
+
+- Hugo
+- Gatsby
+- Antora
+- Jekyll
+- ...
+
+=== Языки разметки
+
+- Markdown
+- reStructuredText
+- AsciiDoc
+
+=== Дзен текстовой разметки
+
+Отказ от хитрого форматирования
+
+Фокус на контенте
+
+[.columns]
+=== !
+
+.page.adoc
+[source,asciidoc,.column]
+++++
+[plantuml]
+----
+include::scheme.puml[]
+----
+++++
+
+.scheme.puml
+[source,puml,.column]
+----
+include::partials/scheme.puml[]
+----
+
+[plantuml,.column]
+----
+include::partials/scheme.puml[]
+----
+
+=== Исходники в репозитории
+
+- Версионирование
+- Линтеры/чекеры
+- Ревью
+- Mass update
+- Генерация побочных артефактов (схемы, графики, API-документация)
+
+== GitLab Pages
+
+..gitlab-ci.yml
+[source,yaml]
+----
+pages:
+  script:
+    - do something
+    - put stuff to <repo>/public
+  artifacts:
+    paths:
+      - public
+----
+
+icon:magic[]
+
+== Что не так с Markdown
+
+=== !
+
+image::images/shelezyaka.jpg[]
+
+=== !
+image::images/flavors.jpg[]
+
+[.columns]
+=== Markdown Flavors
+
+[.column]
+- Bitbucket's Markdown
+- CommonMark
+- CriticMarkup
+- Discount
+- DocFX
+- ExtraMark
+- Ghost
+
+[.column]
+- GitHub Flavored
+- GitLab Flavored
+- Haroopad Flavored
+- iA Writer's
+- Kramdown
+
+[.column]
+- Leanpub Flavore
+- Litedown
+- Lunamark
+- Madoko
+- Markdown
+- Markdown 2
+- ...
 
 == Q & A

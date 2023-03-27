@@ -1,0 +1,11 @@
+@startuml
+
+participant Bob #red
+participant Alice #green
+participant Charlie #yellow
+
+Alice->Bob: Request
+Bob->Alice: Response
+Bob->Charlie: Log
+
+@enduml
