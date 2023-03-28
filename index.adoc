@@ -31,6 +31,12 @@ image::images/nausea.png[]
 
 image::images/lorem.png[]
 
+=== Не нравится никому
+
+(вероятно, кроме менеджмента)
+
+=== А можно лучше?
+
 == Static Site Generators
 
 image::images/ssg.png[]
