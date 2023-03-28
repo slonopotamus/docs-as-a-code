@@ -186,4 +186,9 @@ This is a note.
 - https://jenkins.io/doc/[jenkins.io/doc]
 - И т.д.
 
+== Showcase
+
+- https://sprw.pages.at.dev-my.games/sprw/sprw/[SPRW]
+- https://d1.pages.at.dev-my.games/docs/[D1]
+
 == Q & A
